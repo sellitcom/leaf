@@ -34,8 +34,8 @@ span {
 	line-height: 0.6rem;
 }
 .standard-primary-btn {
-	height: 42px;
-	width: 200px;
+	height: 40px;
+	width: 190px;
 	border-radius: 500px;
 	background-color: rgba(255, 255, 255, 0.8);
 	border: none;
@@ -47,8 +47,8 @@ span {
 	cursor: pointer;
 }
 .standard-secondary-btn {
-	height: calc(42px - 4px);
-	width: calc(200px - 4px);
+	height: calc(40px - 4px);
+	width: calc(190px - 4px);
 	border: 2px solid rgba(255, 255, 255, 0.8);
 	border-radius: 500px;
 	background-color: rgba(255, 255, 255, 0.1);

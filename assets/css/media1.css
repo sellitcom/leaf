@@ -27,8 +27,8 @@
 	justify-content: center;
 }
 .welcome-screen-app-logo-cont {
-	height: calc(100vw - 70vw);
-	width: 30%;
+	height: 110px;
+	width: 110px;
 	background-color: rgba(255, 255, 255, 0.6);
 	border: 2px solid rgba(255, 255, 255, 0.8);
 	border-radius: 25%;
@@ -78,12 +78,12 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 12px;
-	height: 26px;
-	width: calc(26px + 26px + 26px + 16px + 16px);
+	height: 20px;
+	width: calc(20px + 20px + 20px + 12px + 12px);
 }
 .welcome-screen-follow-us-icons-cont .icon-box {
-	height: 26px;
-	width: 26px;
+	height: 20px;
+	width: 20px;
 }
 .welcome-screen-follow-us-icons-cont .icon-box img {
 	height: 100%;
