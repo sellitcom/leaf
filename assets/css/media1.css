@@ -1,0 +1,92 @@
+.welcome-screen {
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--green-2);
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+}
+.welcome-screen-doodle-cont {
+	height: 300px;
+	width: 100vw;
+	position: absolute;
+}
+.welcome-screen-doodle-cont img {
+	height: auto;
+	width: 100%;
+	opacity: 60%;
+	mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+}
+.welcome-screen-main-cont {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.welcome-screen-app-logo-cont {
+	height: calc(100vw - 70vw);
+	width: 30%;
+	background-color: rgba(255, 255, 255, 0.6);
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	border-radius: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.welcome-screen-app-logo-cont img {
+	height: calc(100% - 32px);
+	width: calc(100% - 32px);
+}
+.welcome-screen-app-name-heading {
+	color: var(--text-w-1);
+	margin-top: 32px;
+}
+.welcome-screen-app-slogan-txt {
+	color: var(--text-w-1);
+	opacity: 80%;
+	margin-top: 4px;
+}
+.sign-up-or-in-cont {
+	margin-top: 32px;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.login-acc-btn-1 {
+	margin-top: 8px;
+}
+.welcome-screen-socials-cont {
+	margin-top: 64px;
+	height: fit-content;
+	width: 100vw;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+}
+.welcome-screen-socials-cont span {
+	color: var(--text-w-1);
+	opacity: 80%;
+}
+.welcome-screen-follow-us-icons-cont {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 12px;
+	height: 26px;
+	width: calc(26px + 26px + 26px + 16px + 16px);
+}
+.welcome-screen-follow-us-icons-cont .icon-box {
+	height: 26px;
+	width: 26px;
+}
+.welcome-screen-follow-us-icons-cont .icon-box img {
+	height: 100%;
+	width: 100%;
+	opacity: 50%;
+}
