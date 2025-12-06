@@ -17,7 +17,24 @@
 		<link rel="stylesheet" href="../assets/css/style.css" />
 		<link rel="stylesheet" href="../assets/css/media1.css" />
 	</head>
-	<body>
+	<body onload="removeBlueScreen()">
+		<div class="blue-screen">
+			<div class="loading-progress-cont">
+				<img src="../assets/src/imgs/loading.png" alt="" />
+			</div>
+			<span class="loading-txt">Sabr karo..</span>
+		</div>
+
+		<script>
+			setTimeout(() => {
+				let elem = document.querySelector(".loading-txt");
+				if (elem) {
+					elem.innerHTML = "Bas thori der or..";
+				} else {
+				}
+			}, 5000);
+		</script>
+
 		<div class="welcome-screen">
 			<div class="welcome-screen-doodle-cont">
 				<img src="../assets/src/imgs/doodles.png" alt="" />
@@ -31,10 +48,16 @@
 					>Made with love</span
 				>
 				<div class="sign-up-or-in-cont">
-					<button class="standard-primary-btn create-acc-btn-1">
+					<button
+						class="standard-primary-btn create-acc-btn-1"
+						onclick="createAccoutForm()"
+					>
 						Create Account
 					</button>
-					<button class="standard-secondary-btn login-acc-btn-1">
+					<button
+						class="standard-secondary-btn login-acc-btn-1"
+						onclick="loginForm()"
+					>
 						I already have one
 					</button>
 				</div>
@@ -67,6 +90,24 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class="signup-screen">
+			<div class="signup-screen-emoji-cont">
+				<img
+					src="../assets/src/anims/fluentai_emojis/melting_face_animated.png"
+					alt=""
+				/>
+			</div>
+		</div>
+
+		<div class="login-screen">
+			<div class="login-screen-emoji-cont">
+				<img
+					src="../assets/src/anims/fluentai_emojis/smiling_face_with_sunglasses_animated.png"
+					alt=""
+				/>
 			</div>
 		</div>
 
