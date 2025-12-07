@@ -40,7 +40,7 @@ function removeBlueScreen() {
 		if (!tempEventStore) return; // agar event ruka hi nai to function yehi end kar do
 
 		tempEventStore.prompt(); // roka hua prompt show karo
-		const outcome = await tempEventStore.userChoice;
+		const { outcome } = await tempEventStore.userChoice;
 
 		if (outcome === "accepted") {
 			document.querySelector(
@@ -231,3 +231,4 @@ function login() {
 		document.querySelector(".welcome-screen").style.marginTop = "-100vh";
 	}, 400);
 }
+
