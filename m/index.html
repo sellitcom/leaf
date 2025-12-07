@@ -8,6 +8,12 @@
 		<link rel="icon" href="../assets/src/logos/leaf_32.png" />
 		<meta name="theme-color" content="#21bc55" />
 
+		<!-- <link
+			rel="manifest"
+			crossorigin="use-credentials"
+			href="../manifest.json"
+		/> -->
+
 		<script src="../assets/js/utlis/deviceDetector.js"></script>
 		<script>
 			redirectAccordingly("m");
@@ -46,6 +52,8 @@
 				}, 5000);
 			}
 		</script>
+
+		<div class="main-screen"></div>
 
 		<div class="welcome-screen">
 			<div class="welcome-screen-doodle-cont">
@@ -112,7 +120,9 @@
 					alt=""
 				/>
 			</div>
-			<div class="signup-heading">Create an account</div>
+			<div class="signup-heading" id="signupInformer">
+				Create an account
+			</div>
 			<span class="signup-description">Fill the following form</span>
 			<div class="signup-form-fields-cont">
 				<div class="signup-form-input-field-cover">
@@ -125,11 +135,12 @@
 					</div>
 					<input
 						type="text"
-						id=""
+						id="signupFieldFullName"
 						spellcheck="false"
 						autocomplete="off"
 						placeholder="Full Name"
 						style="text-transform: capitalize"
+						maxlength="64"
 					/>
 				</div>
 				<div class="signup-form-input-field-cover">
@@ -142,10 +153,11 @@
 					</div>
 					<input
 						type="text"
-						id=""
+						id="signupFieldUsername"
 						spellcheck="false"
 						autocomplete="off"
 						placeholder="Username"
+						maxlength="32"
 					/>
 				</div>
 				<div class="signup-form-input-field-cover">
@@ -157,8 +169,8 @@
 						/>
 					</div>
 					<input
-						type="text"
-						id=""
+						type="password"
+						id="signupFieldPassword"
 						spellcheck="false"
 						autocomplete="off"
 						placeholder="Password"
@@ -189,7 +201,10 @@
 					>
 				</div>
 			</div>
-			<button class="standard-primary-btn-green create-acc-btn-2">
+			<button
+				class="standard-primary-btn-green create-acc-btn-2"
+				onclick="signup()"
+			>
 				Create
 			</button>
 			<button
@@ -207,8 +222,79 @@
 					alt=""
 				/>
 			</div>
+			<div class="signup-heading" id="loginInformer">
+				Login to an account
+			</div>
+			<span class="signup-description"
+				>Do you even remeber your credentials?</span
+			>
+			<div class="signup-form-fields-cont">
+				<div class="signup-form-input-field-cover">
+					<div class="signup-form-input-field-icon-box">
+						<img
+							src="../assets/src/icons/user.png"
+							alt=""
+							style="scale: 0.8"
+						/>
+					</div>
+					<input
+						type="text"
+						id="loginFieldUsername"
+						spellcheck="false"
+						autocomplete="off"
+						placeholder="Username"
+					/>
+				</div>
+				<div class="signup-form-input-field-cover">
+					<div class="signup-form-input-field-icon-box">
+						<img
+							src="../assets/src/icons/unlock.png"
+							alt=""
+							style="scale: 0.8"
+						/>
+					</div>
+					<input
+						type="password"
+						id="loginFieldPassword"
+						spellcheck="false"
+						autocomplete="off"
+						placeholder="Password"
+					/>
+				</div>
+				<div class="signup-form-policy-cover">
+					<span
+						>Incase you forgot your password,<br />
+						try finding it yourself in the code or contact
+						admin!</span
+					>
+				</div>
+			</div>
+			<button
+				class="standard-primary-btn-green create-acc-btn-2"
+				onclick="login()"
+			>
+				Login
+			</button>
+			<button
+				class="standard-zerout-btn acc-go-back-1"
+				onclick="logInGoBack()"
+			>
+				<img src="../assets/src/icons/back.png" alt="" />
+			</button>
 		</div>
 
+		<div class="app-install-screen" style="display: none">
+			<img src="../assets/src/logos/leaf_128.png" alt="" />
+			<h1 class="app-install-screen-app-name-heading">Leaf</h1>
+			<span class="app-install-screen-app-slogan-txt"
+				>Made with love</span
+			>
+			<button class="standard-primary-btn-green install-app-btn">
+				Install app
+			</button>
+		</div>
+
+		<script src="../assets/libs/db.js"></script>
 		<script src="../assets/js/script.js"></script>
 		<script src="../assets/js/app1.js"></script>
 	</body>

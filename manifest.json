@@ -1,0 +1,21 @@
+{
+	"name": "Leaf",
+	"short_name": "Leaf",
+	"description": "Track your daily diet and water intake easily",
+	"start_url": "/m/index.html",
+	"display": "standalone",
+	"background_color": "#e9f8ee",
+	"theme_color": "#21bc55",
+	"icons": [
+		{
+			"src": "assets/src/logos/leaf_192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "assets/src/logos/leaf_512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
