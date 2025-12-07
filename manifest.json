@@ -2,7 +2,7 @@
 	"name": "Leaf",
 	"short_name": "Leaf",
 	"description": "Track your daily diet and water intake easily",
-	"start_url": "/m/index.html",
+	"start_url": "m/index.html",
 	"display": "standalone",
 	"background_color": "#e9f8ee",
 	"theme_color": "#21bc55",
@@ -19,3 +19,4 @@
 		}
 	]
 }
+
