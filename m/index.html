@@ -22,17 +22,29 @@
 			<div class="loading-progress-cont">
 				<img src="../assets/src/imgs/loading.png" alt="" />
 			</div>
-			<span class="loading-txt">Sabr karo..</span>
+			<span class="loading-txt">Sabr karen..</span>
 		</div>
 
 		<script>
-			setTimeout(() => {
-				let elem = document.querySelector(".loading-txt");
-				if (elem) {
-					elem.innerHTML = "Bas thori der or..";
-				} else {
-				}
-			}, 5000);
+			let txts = [
+				"Bas thori der or..",
+				"Pehli baar thora time lagta he..",
+				"Next load pe time nai lage ga..",
+				"Bas ek sec or..",
+				"Hosle se kaam len..",
+				"Bas ho gya..",
+			];
+			changeLoadingTxt(0);
+			function changeLoadingTxt(n) {
+				setTimeout(() => {
+					let txtElem = document.querySelector(".loading-txt");
+					if (txtElem) {
+						txtElem.innerHTML = txts[n];
+						randomNum = Math.floor(Math.random() * 6);
+						changeLoadingTxt(randomNum);
+					}
+				}, 5000);
+			}
 		</script>
 
 		<div class="welcome-screen">
@@ -100,6 +112,92 @@
 					alt=""
 				/>
 			</div>
+			<div class="signup-heading">Create an account</div>
+			<span class="signup-description">Fill the following form</span>
+			<div class="signup-form-fields-cont">
+				<div class="signup-form-input-field-cover">
+					<div class="signup-form-input-field-icon-box">
+						<img
+							src="../assets/src/icons/name.png"
+							style="scale: 0.9"
+							alt=""
+						/>
+					</div>
+					<input
+						type="text"
+						id=""
+						spellcheck="false"
+						autocomplete="off"
+						placeholder="Full Name"
+						style="text-transform: capitalize"
+					/>
+				</div>
+				<div class="signup-form-input-field-cover">
+					<div class="signup-form-input-field-icon-box">
+						<img
+							src="../assets/src/icons/user.png"
+							alt=""
+							style="scale: 0.8"
+						/>
+					</div>
+					<input
+						type="text"
+						id=""
+						spellcheck="false"
+						autocomplete="off"
+						placeholder="Username"
+					/>
+				</div>
+				<div class="signup-form-input-field-cover">
+					<div class="signup-form-input-field-icon-box">
+						<img
+							src="../assets/src/icons/unlock.png"
+							alt=""
+							style="scale: 0.8"
+						/>
+					</div>
+					<input
+						type="text"
+						id=""
+						spellcheck="false"
+						autocomplete="off"
+						placeholder="Password"
+					/>
+				</div>
+				<div class="signup-form-gender-question">
+					<span id="selectedGender" style="display: none">male</span>
+					<div
+						class="icon-box"
+						id="maleGenderField"
+						onclick="changeGender('male')"
+						style="border: 1px solid var(--green-2)"
+					>
+						<img src="../assets/src/icons/male-gender.png" alt="" />
+					</div>
+					<div
+						class="icon-box"
+						id="femaleGenderField"
+						onclick="changeGender('female')"
+					>
+						<img src="../assets/src/icons/femenine.png" alt="" />
+					</div>
+				</div>
+				<div class="signup-form-policy-cover">
+					<span
+						>By clicking on 'Create' you agree to<br />
+						our privacy policy.</span
+					>
+				</div>
+			</div>
+			<button class="standard-primary-btn-green create-acc-btn-2">
+				Create
+			</button>
+			<button
+				class="standard-zerout-btn acc-go-back-1"
+				onclick="signUpGoBack()"
+			>
+				<img src="../assets/src/icons/back.png" alt="" />
+			</button>
 		</div>
 
 		<div class="login-screen">

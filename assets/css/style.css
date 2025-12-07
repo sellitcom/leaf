@@ -8,8 +8,14 @@
 	--base-medium: rgb(223, 223, 223);
 	--text-1: rgb(59, 59, 59);
 	--text-2: rgb(129, 129, 129);
+	--text-3: rgb(145, 204, 166);
 	--text-w-1: rgb(238, 238, 238);
 	--white: rgb(233, 248, 238);
+	--green-base-light: rgb(202, 240, 215);
+}
+::placeholder {
+	color: var(--text-3);
+	font-size: 0.7rem;
 }
 body {
 	padding: 0;
@@ -61,11 +67,46 @@ span {
 	color: rgba(255, 255, 255, 0.8);
 	cursor: pointer;
 }
+
+.standard-primary-btn-green {
+	height: 40px;
+	width: 190px;
+	border-radius: 500px;
+	background-color: var(--green-2);
+	border: none;
+	outline: none;
+	font-size: 0.6rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	color: var(--text-w-1);
+	cursor: pointer;
+}
+.standard-zerout-btn {
+	height: 40px;
+	width: 190px;
+	border-radius: 500px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 0.6rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	color: var(--green-2);
+	cursor: pointer;
+}
+.standard-zerout-btn img {
+	height: 16px;
+	width: auto;
+}
 .standard-primary-btn,
+.standard-primary-btn-green,
+.standard-zerout-btn,
 .standard-secondary-btn {
 	transition: 0.2s;
 }
 .standard-primary-btn:active,
+.standard-primary-btn-green:active,
+.standard-zerout-btn:active,
 .standard-secondary-btn:active {
 	scale: 0.95;
 }
